@@ -1,0 +1,8 @@
+D .
+D comp
+R 75514D80 background.png
+P 90B47767 birds.png
+R 176F2E46 land.png
+P 0AF89F65 pencel_down.png
+P CB793EE7 pencel_up.png
+P A3FCC4EF start_button.png
