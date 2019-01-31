@@ -1,5 +1,5 @@
-
-
+import GameView from './GameView'
+    
 export default class Brids extends Laya.Script{
     constructor() {
         super()
@@ -12,8 +12,8 @@ export default class Brids extends Laya.Script{
         this.rig.setVelocity({ x: 0, y: -5 });
     }
 
-    onTriggerEnter(other, self, contact){
-        console.log(other.label)
+    onTriggerEnter(other, self, contact) {
+        this.owner.removeSelf()
     }
 
 }

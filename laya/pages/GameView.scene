@@ -2,7 +2,7 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":23,
+    "selecteID":33,
     "searchKey":"View",
     "referenceLines":[
         {
@@ -17,7 +17,7 @@
         }],
     "props":{"width":750,"sceneColor":"#000000","runtime":"script/GameView.js","height":1334},
     "nodeParent":-1,
-    "maxID":24,
+    "maxID":35,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -28,64 +28,123 @@
         {
             "x":15,
             "type":"Sprite",
-            "searchKey":"Sprite,background",
-            "props":{"y":0,"x":0,"width":3000,"var":"background","texture":"comp/background.png","height":1334},
+            "searchKey":"Sprite,ui",
+            "props":{"y":0,"x":0,"name":"ui"},
             "nodeParent":2,
-            "label":"background",
+            "label":"ui",
             "isOpen":true,
-            "isDirectory":false,
+            "isDirectory":true,
             "isAniNode":true,
-            "hasChild":false,
-            "compId":7,
+            "hasChild":true,
+            "compId":34,
             "child":[
-                ],
-            "$LOCKED":true
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,gameBox",
-            "props":{"name":"gameBox"},
-            "nodeParent":2,
-            "label":"gameBox",
-            "isOpen":true,
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":11,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Sprite",
-            "searchKey":"Sprite,land",
-            "props":{"y":1140,"x":-190,"width":1221,"texture":"comp/land.png","name":"land","height":194},
-            "nodeParent":2,
-            "label":"land",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":23,
-            "child":[
-                ]
-        },
-        {
-            "x":15,
-            "type":"Script",
-            "switchAble":true,
-            "source":"src/script/Director.js",
-            "searchKey":"Script,Director",
-            "removeAble":true,
-            "props":{"PencelUp":"@Prefab:prefab/pencelUp.prefab","PencelDwon":"@Prefab:prefab/pencelDown.prefab","Brids":"@Prefab:prefab/birds.prefab"},
-            "nodeParent":2,
-            "label":"Director",
-            "isDirectory":false,
-            "isAniNode":true,
-            "hasChild":false,
-            "compId":19,
-            "child":[
-                ]
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite,background",
+                    "props":{"y":0,"x":0,"width":3000,"var":"background","texture":"comp/background.png","height":1334},
+                    "nodeParent":34,
+                    "label":"background",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":7,
+                    "child":[
+                        ],
+                    "$LOCKED":true
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite,gameBox",
+                    "props":{"y":0,"x":0,"name":"gameBox"},
+                    "nodeParent":34,
+                    "label":"gameBox",
+                    "isOpen":true,
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":11,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Sprite",
+                    "searchKey":"Sprite,land",
+                    "props":{"y":1074,"x":-190,"width":1437,"texture":"comp/land.png","name":"land","height":278},
+                    "nodeParent":34,
+                    "label":"land",
+                    "isOpen":null,
+                    "isDirectory":true,
+                    "isAniNode":true,
+                    "hasChild":true,
+                    "compId":23,
+                    "child":[
+                        {
+                            "type":"BoxCollider",
+                            "switchAble":true,
+                            "searchKey":"BoxCollider",
+                            "removeAble":true,
+                            "props":{"width":1437,"label":"land","height":278},
+                            "nodeParent":23,
+                            "label":"BoxCollider",
+                            "isDirectory":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":31,
+                            "child":[
+                                ]
+                        },
+                        {
+                            "type":"RigidBody",
+                            "switchAble":true,
+                            "searchKey":"RigidBody",
+                            "removeAble":true,
+                            "props":{"type":"static"},
+                            "nodeParent":23,
+                            "label":"RigidBody",
+                            "isDirectory":false,
+                            "isClose":false,
+                            "isAniNode":true,
+                            "hasChild":false,
+                            "compId":32,
+                            "child":[
+                                ]
+                        }]
+                },
+                {
+                    "x":30,
+                    "type":"Script",
+                    "switchAble":true,
+                    "source":"src/script/Director.js",
+                    "searchKey":"Script,Director",
+                    "removeAble":true,
+                    "props":{"y":0,"x":0,"PencelUp":"@Prefab:prefab/pencel_up.prefab","PencelDwon":"@Prefab:prefab/pencel_down.prefab","Brids":"@Prefab:prefab/brids.prefab"},
+                    "nodeParent":34,
+                    "label":"Director",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":19,
+                    "child":[
+                        ]
+                },
+                {
+                    "x":30,
+                    "type":"Label",
+                    "searchKey":"Label,score",
+                    "props":{"y":37,"x":337,"var":"score","text":"0","fontSize":36,"color":"#ff0400"},
+                    "nodeParent":34,
+                    "label":"score",
+                    "isDirectory":false,
+                    "isAniNode":true,
+                    "hasChild":false,
+                    "compId":30,
+                    "child":[
+                        ]
+                }]
         }],
     "animations":[
         {

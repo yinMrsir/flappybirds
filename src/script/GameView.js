@@ -8,6 +8,10 @@ export default class GameView extends Laya.Scene{
         this.speed = 4
     }
 
+    setScore(num = 0) {
+        this.score.text = num
+    }
+
     move() {
         if (-this.background.x >= 750) {
             this.background.x = -this.speed

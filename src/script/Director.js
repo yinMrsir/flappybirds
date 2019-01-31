@@ -12,7 +12,11 @@ export default class Director extends Laya.Script{
     
     onEnable() {
         this.count = 1
+        this.scoreCount = 0
         this.Brid = null
+        this.PencelsData = []
+        this.isAddScore = true
+        this.score = 0
         this.gameBox = this.owner.getChildByName('gameBox')
         this.createPencel()
         this.createBrids()
@@ -20,18 +24,37 @@ export default class Director extends Laya.Script{
 
     onUpdate() {
        GameView.instance.move()
+       for (let i = 0; i < this.PencelsData.length; i++) {
+           let pencel = this.PencelsData[i]
+           if (this.Brid.x > pencel.x + pencel.width) {
+               if (this.isAddScore) {
+                    this.isAddScore = false
+                    this.score++
+                    GameView.instance.setScore(this.score)
+               }
+           }
+       }
     }
 
-    onClick() {
+    onStageClick() {
         if (this.Brid) {
             Brids.instance.rig.setVelocity({ x: 0, y: -5 });
+        }
+    }
+
+    addScore() {
+        this.scoreCount++
+        if (this.scoreCount === 2) {
+            this.PencelsData.shift()
+            this.scoreCount = 0
+            this.isAddScore = true
         }
     }
 
     createPencel() {
         this.count++
         if (this.count === 2) {
-            let min = Laya.stage.height / 18
+            let min = Laya.stage.height / 12
             let max = Laya.stage.height / 3
             let top = min + Math.random() * (max - min)
             
@@ -40,8 +63,10 @@ export default class Director extends Laya.Script{
             this.gameBox.addChild(PencelUp)
     
             let PencelDwon = Laya.Pool.getItemByCreateFun('PencelDwon', this.PencelDwon.create, this.PencelDwon)
-            PencelDwon.pos(Laya.stage.width, top + 400)
+            PencelDwon.pos(Laya.stage.width, top + 250)
             this.gameBox.addChild(PencelDwon)
+
+            this.PencelsData.push(PencelUp)
     
             this.count = 0
         }
