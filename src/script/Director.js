@@ -38,7 +38,7 @@ export default class Director extends Laya.Script{
 
     onStageClick() {
         if (this.Brid) {
-            Brids.instance.rig.setVelocity({ x: 0, y: -5 });
+            Brids.instance.rig.setVelocity({ x: 0, y: -7 });
         }
     }
 
@@ -54,8 +54,8 @@ export default class Director extends Laya.Script{
     createPencel() {
         this.count++
         if (this.count === 2) {
-            let min = Laya.stage.height / 12
-            let max = Laya.stage.height / 3
+            let min = Laya.stage.height / 8
+            let max = Laya.stage.height / 2
             let top = min + Math.random() * (max - min)
             
             let PencelUp = Laya.Pool.getItemByCreateFun('PencelUp', this.PencelUp.create, this.PencelUp)
@@ -63,7 +63,7 @@ export default class Director extends Laya.Script{
             this.gameBox.addChild(PencelUp)
     
             let PencelDwon = Laya.Pool.getItemByCreateFun('PencelDwon', this.PencelDwon.create, this.PencelDwon)
-            PencelDwon.pos(Laya.stage.width, top + 250)
+            PencelDwon.pos(Laya.stage.width, top + (Laya.stage.height / 5))
             this.gameBox.addChild(PencelDwon)
 
             this.PencelsData.push(PencelUp)

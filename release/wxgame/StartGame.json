@@ -1,1 +1,1 @@
-{"type":"View","props":{"width":750,"runtime":"script/StartGame.js","height":1334},"compId":2,"child":[{"type":"Label","props":{"y":640,"x":207,"width":336,"text":"点击开始游戏","height":53,"fontSize":36,"color":"#ffffff","align":"center"},"compId":4}],"loadList":[],"loadList3D":[]}
+{"type":"View","props":{"width":750,"runtime":"script/StartGame.js","height":1334},"compId":2,"child":[{"type":"Label","props":{"y":640,"x":207,"width":336,"var":"pageText","text":"点击开始游戏","height":53,"fontSize":36,"color":"#ffffff","align":"center"},"compId":4}],"loadList":[],"loadList3D":[]}

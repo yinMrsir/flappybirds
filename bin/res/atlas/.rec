@@ -1,11 +1,11 @@
 D .
 D comp
-R 75514D80 background.png
+R 7E45A0CE background.png
 P 90B47767 birds.png
 P E6F118A4 birds_01.png
 P 7A82CD48 birds_02.png
 P 8DBBF9D8 birds_03.png
-R 176F2E46 land.png
-R 351A3738 pencel_down.png
-R D58CAAF4 pencel_up.png
+R C01CC010 land.png
+R 71DADD1A pencel_down.png
+R 1B4015AF pencel_up.png
 P A3FCC4EF start_button.png
