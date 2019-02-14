@@ -19,7 +19,10 @@ export default class Director extends Laya.Script{
         this.isAddScore = true
         this.score = 0
 
-        
+        let {avatarUrl, nickName} = wx.getStorageSync('userInfo')
+        this.owner.userhead.skin = avatarUrl
+        this.owner.username.text = nickName
+
         let dataSource = []
         for (let i = 0; i < 20; i++) {
             dataSource.push({

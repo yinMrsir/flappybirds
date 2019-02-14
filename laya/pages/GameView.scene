@@ -1,8 +1,8 @@
 {
     "x":0,
     "type":"View",
-    "selectedBox":42,
-    "selecteID":41,
+    "selectedBox":2,
+    "selecteID":44,
     "searchKey":"View",
     "referenceLines":[
         {
@@ -17,7 +17,7 @@
         }],
     "props":{"width":750,"sceneColor":"#000000","runtime":"script/GameView.js","height":1334},
     "nodeParent":-1,
-    "maxID":43,
+    "maxID":45,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -105,7 +105,7 @@
             "x":15,
             "type":"Label",
             "searchKey":"Label,score",
-            "props":{"y":37,"x":337,"var":"score","text":"0","fontSize":36,"color":"#ff0400"},
+            "props":{"y":38,"x":133,"var":"score","text":"0","fontSize":36,"color":"#ff0400"},
             "nodeParent":2,
             "label":"score",
             "isDirectory":false,
@@ -122,14 +122,13 @@
             "props":{"y":0,"x":0,"width":750,"visible":false,"var":"gameover","height":1336},
             "nodeParent":2,
             "label":"gameover",
-            "isOpen":true,
+            "isOpen":false,
             "isDirectory":true,
             "isAniNode":true,
             "hasChild":true,
             "compId":42,
             "child":[
                 {
-                    "x":30,
                     "type":"Label",
                     "searchKey":"Label",
                     "props":{"y":190,"x":251,"text":"游戏结束","fontSize":62},
@@ -143,7 +142,6 @@
                         ]
                 },
                 {
-                    "x":30,
                     "type":"List",
                     "searchKey":"List,rank_list",
                     "props":{"y":326,"x":240,"width":328,"var":"rank_list","vScrollBarSkin":"comp/vscroll.png","spaceY":15,"repeatY":8,"repeatX":1,"height":484,"elasticEnabled":true},
@@ -196,7 +194,6 @@
                         }]
                 },
                 {
-                    "x":30,
                     "type":"Button",
                     "searchKey":"Button,startGameBtn",
                     "props":{"y":889,"x":252,"width":245,"var":"startGameBtn","skin":"comp/button.png","labelSize":40,"label":"再来一局","height":91},
@@ -224,6 +221,34 @@
             "isAniNode":true,
             "hasChild":false,
             "compId":19,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Image",
+            "searchKey":"Image,userhead",
+            "props":{"y":16,"x":33,"width":60,"var":"userhead","height":60},
+            "nodeParent":2,
+            "label":"userhead",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":43,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label,username",
+            "props":{"y":87,"x":11,"width":104,"var":"username","text":"名字","overflow":"visible","height":30,"fontSize":30,"align":"center"},
+            "nodeParent":2,
+            "label":"username",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":44,
             "child":[
                 ]
         }],
