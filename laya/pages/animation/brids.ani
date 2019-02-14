@@ -95,6 +95,14 @@
                                 "index":0
                             },
                             {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":3,
+                                "key":"alpha",
+                                "index":1
+                            },
+                            {
                                 "value":0,
                                 "tweenMethod":"linearNone",
                                 "tween":true,
@@ -174,6 +182,14 @@
                                 "target":4,
                                 "key":"alpha",
                                 "index":2
+                            },
+                            {
+                                "value":1,
+                                "tweenMethod":"linearNone",
+                                "tween":true,
+                                "target":4,
+                                "key":"alpha",
+                                "index":3
                             },
                             {
                                 "value":0,

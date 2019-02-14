@@ -2,10 +2,18 @@ D .
 D comp
 R 7E45A0CE background.png
 P 90B47767 birds.png
-P E6F118A4 birds_01.png
-P 7A82CD48 birds_02.png
-P 8DBBF9D8 birds_03.png
+P F9A076AC birds_01.png
+P 63A68A63 birds_02.png
+P 1B633BCC birds_03.png
+P 1F3929EA button.png
 R C01CC010 land.png
+R 7B38C243 m_background.png
 R 71DADD1A pencel_down.png
-R 1B4015AF pencel_up.png
+R 9DE63293 pencel_up.png
+P 4A543365 start_1.png
 P A3FCC4EF start_button.png
+R 671B7149 title.png
+P 52107B89 vscroll$bar.png
+P E26B933E vscroll$down.png
+P B9680947 vscroll$up.png
+P 7E990267 vscroll.png

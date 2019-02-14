@@ -11,37 +11,63 @@ export default class Director extends Laya.Script{
     }
     
     onEnable() {
+        this.isGameOver = false         // 游戏是否结束
         this.count = 1
         this.scoreCount = 0
         this.Brid = null
         this.PencelsData = []
         this.isAddScore = true
         this.score = 0
+
+        
+        let dataSource = []
+        for (let i = 0; i < 20; i++) {
+            dataSource.push({
+                username: '' + i,
+                score: 100
+            })
+        }
+        this.owner.rank_list.dataSource = dataSource
         this.gameBox = this.owner.getChildByName('gameBox')
         this.createPencel()
         this.createBrids()
+
+        this.owner.startGameBtn.on(Laya.Event.CLICK, this, this.startGame)
+    }
+
+    startGame() {
+        Laya.Scene.open('GameView.scene')
+    }
+
+    stopGame() {
+        this.isGameOver = true
+        this.owner.gameover.visible = true
     }
 
     onUpdate() {
-       GameView.instance.move()
-       for (let i = 0; i < this.PencelsData.length; i++) {
-           let pencel = this.PencelsData[i]
-           if (this.Brid.x > pencel.x + pencel.width) {
-               if (this.isAddScore) {
+        if(this.isGameOver) {
+            return
+        }
+        GameView.instance.move()
+        for (let i = 0; i < this.PencelsData.length; i++) {
+            let pencel = this.PencelsData[i]
+            if (this.Brid.x > pencel.x + pencel.width) {
+                if (this.isAddScore) {
                     this.isAddScore = false
                     this.score++
                     GameView.instance.setScore(this.score)
-               }
-           }
-       }
+                }
+            }
+        }
     }
 
     onStageClick() {
-        if (this.Brid) {
+        if (this.Brid && !this.isGameOver) {
             Brids.instance.rig.setVelocity({ x: 0, y: -7 });
         }
     }
 
+    // 
     addScore() {
         this.scoreCount++
         if (this.scoreCount === 2) {

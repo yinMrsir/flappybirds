@@ -1,4 +1,5 @@
 import GameView from './GameView'
+import Director from './Director'
     
 export default class Brids extends Laya.Script{
     constructor() {
@@ -13,7 +14,8 @@ export default class Brids extends Laya.Script{
     }
 
     onTriggerEnter(other, self, contact) {
-        this.owner.removeSelf()
+        Director.instance.stopGame()
+        // this.owner.removeSelf()
     }
 
 }

@@ -2,11 +2,11 @@
     "x":0,
     "type":"View",
     "selectedBox":2,
-    "selecteID":4,
+    "selecteID":35,
     "searchKey":"View",
-    "props":{"width":750,"sceneColor":"#000000","runtime":"script/StartGame.js","height":1334},
+    "props":{"width":750,"sceneColor":"#3bbafd","runtime":"script/StartGame.js","height":1334},
     "nodeParent":-1,
-    "maxID":7,
+    "maxID":36,
     "label":"View",
     "isOpen":true,
     "isDirectory":true,
@@ -16,15 +16,100 @@
     "child":[
         {
             "x":15,
-            "type":"Label",
-            "searchKey":"Label,pageText",
-            "props":{"y":640,"x":207,"width":336,"var":"pageText","text":"点击开始游戏","height":53,"fontSize":36,"color":"#ffffff","align":"center"},
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":493,"x":-425,"texture":"comp/background.png"},
             "nodeParent":2,
-            "label":"pageText",
+            "label":"Sprite",
+            "isOpen":true,
             "isDirectory":false,
             "isAniNode":true,
             "hasChild":false,
-            "compId":4,
+            "compId":8,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":603,"x":-105,"texture":"comp/m_background.png"},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":30,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":988,"x":-304,"width":1358,"texture":"comp/land.png","height":358},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":9,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Rect",
+            "searchKey":"Rect",
+            "props":{"y":0,"x":0,"width":750,"lineWidth":0,"height":1336,"fillColor":"#3bbafd"},
+            "nodeParent":2,
+            "label":"Rect",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":12,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Sprite",
+            "searchKey":"Sprite",
+            "props":{"y":121,"x":0,"texture":"comp/title.png"},
+            "nodeParent":2,
+            "label":"Sprite",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":33,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Label",
+            "searchKey":"Label",
+            "props":{"y":381,"x":225,"text":"点击屏幕，让小蜜蜂飞","fontSize":30,"color":"#ffffff"},
+            "nodeParent":2,
+            "label":"Label",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":34,
+            "child":[
+                ]
+        },
+        {
+            "x":15,
+            "type":"Animation",
+            "searchKey":"Animation",
+            "props":{"y":536,"x":375,"source":"animation/startBtn.ani","autoPlay":true},
+            "nodeParent":2,
+            "label":"Animation",
+            "isDirectory":false,
+            "isAniNode":true,
+            "hasChild":false,
+            "compId":35,
             "child":[
                 ]
         }],

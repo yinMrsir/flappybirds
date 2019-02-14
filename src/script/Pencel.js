@@ -1,18 +1,23 @@
 import Director from './Director'
 
-export default class PencelUp extends Laya.Script{
+export default class Pencel extends Laya.Script{
     constructor() {
         super()
     }
 
     onEnable() {
         //设置初始速度
-        var rig = this.owner.getComponent(Laya.RigidBody);
-        rig.setVelocity({ x: -4, y: 0 });
+        this.rig = this.owner.getComponent(Laya.RigidBody);
+        this.rig.setVelocity({ x: -4, y: 0 });
         this.isCreate = false
     }
 
     onUpdate() {
+        // 如果游戏结束停止运动
+        if (Director.instance.isGameOver) {
+            this.rig.setVelocity({ x: 0, y: 0 });
+            return
+        }
         let owner = this.owner
         if (owner.x <= -owner.width) {
             owner.removeSelf()
@@ -22,8 +27,7 @@ export default class PencelUp extends Laya.Script{
             if(!this.isCreate) {
                 this.isCreate = true
                 Director.instance.createPencel()
-            }
-            
+            }   
         }
     }
 
