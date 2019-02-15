@@ -36,6 +36,8 @@ export default class Director extends Laya.Script{
         this.createBrids()
 
         this.owner.startGameBtn.on(Laya.Event.CLICK, this, this.startGame)
+
+        this.openDataContext = wx.getOpenDataContext()
     }
 
     startGame() {
@@ -43,8 +45,11 @@ export default class Director extends Laya.Script{
     }
 
     stopGame() {
+        this.openDataContext.postMessage({ type: 'friends', year: (new Date()).getFullYear() })
+
         this.isGameOver = true
         this.owner.gameover.visible = true
+
     }
 
     onUpdate() {

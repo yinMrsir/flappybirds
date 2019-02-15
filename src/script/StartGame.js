@@ -35,7 +35,6 @@ export default class GameStart extends Laya.Scene{
                                     jsonData: JSON.stringify(userinfo)
                                 },
                                 success(data){
-                                    console.log(data)
                                     // 存储到本地
                                     wx.setStorageSync('userInfo', data.data.Result)
                                     Laya.Scene.open('GameView.scene')
