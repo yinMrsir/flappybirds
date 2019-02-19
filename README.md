@@ -1,3 +1,3 @@
 ## demo
 
-![http://www.yinchunyu.com/img/ueditor/1097693836228038656.gif](http://www.yinchunyu.com/img/ueditor/1097693836228038656.gif)
+![img](https://github.com/yinMrsir/flappybirds/blob/master/2.gif)
