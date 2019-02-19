@@ -1,3 +1,3 @@
 ## demo
 
-![Image text](http://www.yinchunyu.com/img/ueditor/1097693836228038656.gif)
+![Image](http://www.yinchunyu.com/img/ueditor/1097693836228038656.gif)
